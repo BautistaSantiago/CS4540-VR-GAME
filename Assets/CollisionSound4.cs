@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine;
 
-//THIS HAS BOTH THE COLLISION SOUND AND FOR POINT ON THE SCORE BOARD
-//EVERY OTHER SCRIPT OF THIS LIKE COLLISIONSOUND2 JUST CHANGES THE POINT VALUE FOR OTHER TARGETS
-public class CollisionSound : MonoBehaviour
+public class CollisionSound4 : MonoBehaviour
 {
     public AudioClip collisionSound; // Sound to play on collision
 
@@ -34,7 +32,7 @@ public class CollisionSound : MonoBehaviour
         if (collision.gameObject.GetComponent<Rigidbody>())
         {
             // Play the collision sound
-            sManager.IncreaseScore(1); // Adjust this for score value
+            sManager.IncreaseScore(4);
             audioSource.Play();
             // Debug.Log(score.playerScore);
         }
